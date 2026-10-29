@@ -26,7 +26,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     productUrl,
   });
 
-  const mainImage = product.image_urls[0] || 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=800&auto=format&fit=crop&q=80';
+  const mainImage = product.image_urls[0] || '/images/branding/placeholder.jpg';
 
   const renderStatus = () => {
     switch (product.availability_status) {

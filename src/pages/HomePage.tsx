@@ -67,7 +67,7 @@ export const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-navy-950 via-slate-900 to-navy-950 text-white overflow-hidden py-14 sm:py-20 lg:py-24">
         {/* Subtle geometric pattern background */}
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ea580c_1px,transparent_1px)] [background-size:16px_16px]" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#dc2626_1px,transparent_1px)] [background-size:16px_16px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -139,7 +139,7 @@ export const HomePage: React.FC = () => {
                   {/* High quality hardware & tools showcase photography */}
                   <div className="aspect-[4/3] sm:aspect-[16/11] relative overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=900&auto=format&fit=crop&q=85"
+                      src="/images/hero/hero-tools.jpg"
                       alt="Bombay Tools Agency - Hardware, Power Tools & Building Materials"
                       className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
                     />

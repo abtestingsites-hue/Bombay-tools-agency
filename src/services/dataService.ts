@@ -5,8 +5,8 @@ import { DEFAULT_BUSINESS_SETTINGS } from '@/config/business';
 
 // Local Storage Keys for Mock / Offline Persistence
 const STORAGE_KEYS = {
-  CATEGORIES: 'hw_store_categories',
-  PRODUCTS: 'hw_store_products',
+  CATEGORIES: 'hw_store_categories_v3',
+  PRODUCTS: 'hw_store_products_v3',
   ENQUIRIES: 'hw_store_enquiries',
   SETTINGS: 'hw_store_business_settings',
   FAQS: 'hw_store_faqs',

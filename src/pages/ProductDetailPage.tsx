@@ -161,7 +161,7 @@ export const ProductDetailPage: React.FC = () => {
         <div className="lg:col-span-6 space-y-4">
           <div className="relative aspect-[4/3] bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
             <img
-              src={selectedImage || 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=800&auto=format&fit=crop&q=80'}
+              src={selectedImage || '/images/branding/placeholder.jpg'}
               alt={product.name}
               className="w-full h-full object-cover object-center"
             />

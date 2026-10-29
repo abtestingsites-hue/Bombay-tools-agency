@@ -2,13 +2,13 @@
 -- Categories
 INSERT INTO public.categories (id, name, slug, description, image_url, sort_order, is_active)
 VALUES
-('c1000000-0000-0000-0000-000000000001', 'Electrical Materials', 'electrical-materials', 'Cables, conduit pipes, modular switches, distribution boards, and industrial electrical supplies.', 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80', 1, true),
-('c1000000-0000-0000-0000-000000000002', 'Hardware and Fasteners', 'hardware-and-fasteners', 'High tensile bolts, SS screws, structural fasteners, hinges, locks, and door fittings.', 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=800&auto=format&fit=crop&q=80', 2, true),
-('c1000000-0000-0000-0000-000000000003', 'Plumbing Materials', 'plumbing-materials', 'CPVC, UPVC, PVC drainage pipes, brass fittings, ball valves, and solvent cements.', 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80', 3, true),
-('c1000000-0000-0000-0000-000000000004', 'Construction Materials', 'construction-materials', 'Waterproofing chemicals, tile adhesives, binding wire, safety gear, and masonry accessories.', 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?w=800&auto=format&fit=crop&q=80', 4, true),
+('c1000000-0000-0000-0000-000000000001', 'Electrical Materials', 'electrical-materials', 'Cables, conduit pipes, modular switches, distribution boards, and industrial electrical supplies.', 'https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=800&auto=format&fit=crop&q=80', 1, true),
+('c1000000-0000-0000-0000-000000000002', 'Hardware and Fasteners', 'hardware-and-fasteners', 'High tensile bolts, SS screws, structural fasteners, hinges, locks, and door fittings.', 'https://images.unsplash.com/photo-1536842409491-b3bbde0e3b66?w=800&auto=format&fit=crop&q=80', 2, true),
+('c1000000-0000-0000-0000-000000000003', 'Plumbing Materials', 'plumbing-materials', 'CPVC, UPVC, PVC drainage pipes, brass fittings, ball valves, and solvent cements.', 'https://images.unsplash.com/photo-1548373220-9a83eb96cdd7?w=800&auto=format&fit=crop&q=80', 3, true),
+('c1000000-0000-0000-0000-000000000004', 'Construction Materials', 'construction-materials', 'Waterproofing chemicals, tile adhesives, binding wire, safety gear, and masonry accessories.', 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&auto=format&fit=crop&q=80', 4, true),
 ('c1000000-0000-0000-0000-000000000005', 'Bathware and Sanitaryware', 'bathware-and-sanitaryware', 'Faucets, overhead showers, health faucets, angle valves, waste couplings, and SS sinks.', 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop&q=80', 5, true),
 ('c1000000-0000-0000-0000-000000000006', 'Tools and Accessories', 'tools-and-accessories', 'Heavy-duty power tools, angle grinders, drill machines, hand tools, and cutting blades.', 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&auto=format&fit=crop&q=80', 6, true),
-('c1000000-0000-0000-0000-000000000007', 'Pumps and Related Equipment', 'pumps-and-related-equipment', 'Submersible borehole pumps, open-well pumps, domestic monoblock pumps, and control panels.', 'https://images.unsplash.com/photo-1574757987642-5755f08392c5?w=800&auto=format&fit=crop&q=80', 7, true)
+('c1000000-0000-0000-0000-000000000007', 'Pumps and Related Equipment', 'pumps-and-related-equipment', 'Submersible borehole pumps, open-well pumps, domestic monoblock pumps, and control panels.', 'https://images.unsplash.com/photo-1583723708348-b61db101dfe3?w=800&auto=format&fit=crop&q=80', 7, true)
 ON CONFLICT (id) DO NOTHING;
 
 -- Initial Business Settings
