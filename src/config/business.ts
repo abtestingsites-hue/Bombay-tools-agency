@@ -4,11 +4,11 @@ export const DEFAULT_BUSINESS_SETTINGS: BusinessSettings = {
   id: 'default-settings',
   shop_name: import.meta.env.VITE_SHOP_NAME || 'Bombay Tools Agency',
   tagline: 'Quality Hardware, Power Tools & Building Materials',
-  phone: import.meta.env.VITE_PHONE_NUMBER || '',
-  whatsapp_number: import.meta.env.VITE_WHATSAPP_NUMBER || '',
+  phone: import.meta.env.VITE_PHONE_NUMBER || '+91 94430 25800',
+  whatsapp_number: import.meta.env.VITE_WHATSAPP_NUMBER || '+919443025800',
   email: 'contact@bombaytoolsagency.com',
-  address: '',
-  opening_hours: '',
+  address: '215, Dr Nanjappa Rd, Flyover, Anupperpalayam, Ram Nagar, Coimbatore, Tamil Nadu 641018',
+  opening_hours: 'Mon - Sat: 9:00 AM - 8:30 PM (Sunday Closed)',
   google_maps_url:
     import.meta.env.VITE_GOOGLE_MAPS_URL ||
     'https://maps.app.goo.gl/zrJSTZ6aXR7ATsrTA?g_st=aw',
@@ -24,9 +24,12 @@ export const BUSINESS_CONFIG = {
   },
   country: 'India',
   state: 'Tamil Nadu',
+  city: 'Coimbatore',
   defaultLanguage: 'en' as const,
   supportedLanguages: ['en', 'ta'] as const,
   defaultGoogleMapsUrl: 'https://maps.app.goo.gl/zrJSTZ6aXR7ATsrTA?g_st=aw',
+  googleMapsEmbedUrl:
+    'https://maps.google.com/maps?q=Bombay+Tools+Agency,+215+Dr+Nanjappa+Rd,+Anupperpalayam,+Ram+Nagar,+Coimbatore,+Tamil+Nadu+641018&t=&z=16&ie=UTF8&iwloc=&output=embed',
 };
 
 /**
@@ -39,7 +42,6 @@ export function formatInternationalPhoneNumber(phone: string): string {
   if (digits.startsWith('+')) {
     return digits;
   }
-  // If 10 digits typical Indian mobile, prepend +91
   if (digits.length === 10) {
     return `+91${digits}`;
   }

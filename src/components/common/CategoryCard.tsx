@@ -40,3 +40,4 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
     </Link>
   );
 };
+

@@ -96,3 +96,4 @@ export function generateFAQSchema(faqs: FAQ[]) {
     })),
   };
 }
+

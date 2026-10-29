@@ -26,3 +26,4 @@ VALUES
 ('f1000000-0000-0000-0000-000000000004', 'Do you provide delivery to site or store pickup?', 'Both options are available. Customers can inspect and pick up materials directly from our shop, or request site delivery for bulk orders across our regional delivery coverage. Exact delivery timelines depend on destination and material volume.', 'Delivery', 'delivery-and-pickup-options', 4, true),
 ('f1000000-0000-0000-0000-000000000005', 'Where is your shop located?', 'Our store is located in Tamil Nadu. You can find our exact location and get turn-by-turn driving directions via our verified Google Maps link on the contact and location page.', 'Location', 'shop-location-directions', 5, true)
 ON CONFLICT (id) DO NOTHING;
+

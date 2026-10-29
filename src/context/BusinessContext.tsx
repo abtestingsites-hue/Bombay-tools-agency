@@ -57,3 +57,4 @@ export const useBusiness = (): BusinessContextType => {
   }
   return context;
 };
+

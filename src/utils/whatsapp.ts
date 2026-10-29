@@ -130,3 +130,4 @@ export function buildGeneralEnquiryMessage(params: GeneralEnquiryParams): string
 
   return lines.join('\n');
 }
+

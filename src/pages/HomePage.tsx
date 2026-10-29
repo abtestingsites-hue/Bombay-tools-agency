@@ -11,6 +11,8 @@ import {
   PhoneCall,
   CheckCircle2,
   ChevronRight,
+  MessageCircle,
+  Building,
 } from 'lucide-react';
 import { SEOHead } from '@/components/SEOHead';
 import { ProductCard } from '@/components/common/ProductCard';
@@ -21,6 +23,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { DataService } from '@/services/dataService';
 import { Category, Product, FAQ } from '@/types';
 import { generateLocalBusinessSchema } from '@/utils/seo';
+import { BUSINESS_CONFIG } from '@/config/business';
 
 export const HomePage: React.FC = () => {
   const { settings } = useBusiness();
@@ -56,22 +59,23 @@ export const HomePage: React.FC = () => {
   return (
     <div>
       <SEOHead
-        title={`${settings.shop_name} | Hardware & Building Materials in Tamil Nadu`}
-        description="Wholesale and retail supplier of genuine electrical materials, plumbing supplies, construction hardware, power tools, and water pumps in Tamil Nadu, India."
+        title={`${settings.shop_name} | Hardware, Power Tools & Building Materials - Coimbatore, Tamil Nadu`}
+        description="Wholesale and retail supplier of genuine electrical materials, plumbing supplies, construction hardware, power tools, and water pumps in Coimbatore, Tamil Nadu."
         structuredData={localBusinessSchema}
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy-950 via-slate-900 to-navy-950 text-white overflow-hidden py-16 sm:py-24">
+      <section className="relative bg-gradient-to-br from-navy-950 via-slate-900 to-navy-950 text-white overflow-hidden py-14 sm:py-20 lg:py-24">
         {/* Subtle geometric pattern background */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ea580c_1px,transparent_1px)] [background-size:16px_16px]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Left Column: Copy & Actions */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center space-x-2 bg-brand-600/20 border border-brand-500/40 text-brand-400 px-3 py-1 rounded-full text-xs font-semibold">
                 <span className="w-2 h-2 rounded-full bg-brand-500 animate-pulse" />
-                <span>Tamil Nadu Hardware & Materials Depot</span>
+                <span>Tamil Nadu Hardware & Materials Depot • Coimbatore</span>
               </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
@@ -83,10 +87,10 @@ export const HomePage: React.FC = () => {
               </p>
 
               {/* CTAs */}
-              <div className="pt-2 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
                 <Link
                   to="/products"
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-md transition-all text-sm sm:text-base"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-md transition-all text-sm sm:text-base"
                 >
                   {t('explore_catalog')}
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -94,16 +98,16 @@ export const HomePage: React.FC = () => {
 
                 <Link
                   to="/bulk-orders"
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-sm border border-white/20 transition-all text-sm sm:text-base"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-sm border border-white/20 transition-all text-sm sm:text-base"
                 >
                   <FileSpreadsheet className="w-4 h-4 mr-2 text-brand-400" />
                   {t('request_quote')}
                 </Link>
 
                 <WhatsAppButton
-                  message="Hello, I want to enquire about hardware products from your store."
+                  message="Hello Bombay Tools Agency, I want to enquire about hardware products from your store."
                   variant="primary"
-                  className="text-sm sm:text-base py-3.5"
+                  className="text-sm sm:text-base py-3.5 rounded-xl"
                 />
               </div>
 
@@ -124,57 +128,70 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Quick Summary Card / Location Highlight */}
-            <div className="lg:col-span-5">
-              <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <span className="text-xs font-semibold text-brand-400 uppercase tracking-wider block">
-                      Physical Retail Counter
-                    </span>
-                    <h2 className="text-xl font-bold text-white mt-1">
-                      {settings.shop_name}
-                    </h2>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-brand-600 text-white flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                </div>
+            {/* Right Column: Hero Hardware Showcase Image */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative mx-auto max-w-md lg:max-w-none">
+                {/* Glow behind image */}
+                <div className="absolute -inset-1.5 bg-gradient-to-r from-brand-600 to-amber-500 rounded-3xl blur-lg opacity-30" />
 
-                <div className="space-y-3 text-sm text-slate-300">
-                  <div className="flex items-start space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>In-store inspection & counter sales available.</span>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Fast WhatsApp quotation for electrical & plumbing BOQs.</span>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Transparent commercial rates for construction projects.</span>
-                  </div>
-                </div>
+                {/* Main Card with Photography */}
+                <div className="relative rounded-2xl overflow-hidden border border-white/15 bg-navy-900 shadow-2xl">
+                  {/* High quality hardware & tools showcase photography */}
+                  <div className="aspect-[4/3] sm:aspect-[16/11] relative overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=900&auto=format&fit=crop&q=85"
+                      alt="Bombay Tools Agency - Hardware, Power Tools & Building Materials"
+                      className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
 
-                <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row gap-3">
-                  <a
-                    href={settings.google_maps_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-sm transition-colors"
-                  >
-                    <MapPin className="w-4 h-4 mr-1.5" />
-                    {t('get_directions')}
-                  </a>
-                  {settings.phone && (
-                    <a
-                      href={`tel:${settings.phone}`}
-                      className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors"
-                    >
-                      <PhoneCall className="w-4 h-4 mr-1.5 text-brand-400" />
-                      Call Store
-                    </a>
-                  )}
+                    {/* Top pill badge */}
+                    <div className="absolute top-3.5 left-3.5">
+                      <span className="bg-navy-950/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/20 inline-flex items-center shadow-md">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 mr-2" />
+                        In-Store Counter Open
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Information Overlay */}
+                  <div className="p-5 sm:p-6 space-y-4 bg-navy-950/90 backdrop-blur-md border-t border-white/10">
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <span className="text-xs font-bold text-brand-400 uppercase tracking-wider block">
+                          Verified Physical Store
+                        </span>
+                        <h2 className="text-lg font-bold text-white mt-0.5">
+                          {settings.shop_name}
+                        </h2>
+                        <p className="text-xs text-slate-300 mt-1 flex items-center">
+                          <MapPin className="w-3.5 h-3.5 text-brand-400 mr-1 shrink-0" />
+                          Dr Nanjappa Rd, Coimbatore, Tamil Nadu
+                        </p>
+                      </div>
+                      <div className="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                        <Building className="w-5 h-5" />
+                      </div>
+                    </div>
+
+                    <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row gap-2.5">
+                      <a
+                        href={settings.google_maps_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold shadow-sm transition-colors"
+                      >
+                        <MapPin className="w-3.5 h-3.5 mr-1.5" />
+                        Get Directions
+                      </a>
+                      <Link
+                        to="/contact"
+                        className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/20 transition-colors"
+                      >
+                        Contact Us
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -300,14 +317,14 @@ export const HomePage: React.FC = () => {
                 message="Hello, I would like to get a bulk quotation for my upcoming construction project."
                 variant="secondary"
                 label="WhatsApp BOQ Directly"
-                className="w-full justify-center py-4 bg-white/10 hover:bg-white/20 text-white border-white/20"
+                className="w-full justify-center py-4 bg-white/10 hover:bg-white/20 text-white border-white/20 rounded-xl"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Store Location & Google Maps Section */}
+      {/* Store Location & Google Maps Section (With Embedded Google Map & Contact Details) */}
       <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -323,25 +340,34 @@ export const HomePage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            {/* Location card */}
+            {/* Contact & Location Details Card */}
             <div className="lg:col-span-5 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
               <div className="space-y-6">
                 <div>
+                  <div className="inline-flex items-center space-x-1.5 bg-emerald-50 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold mb-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    <span>Verified Physical Location</span>
+                  </div>
                   <h3 className="text-xl font-bold text-slate-900">{settings.shop_name}</h3>
-                  <p className="text-xs text-slate-500 mt-0.5">Tamil Nadu, India</p>
+                  <p className="text-xs text-slate-500 mt-0.5">Hardware & Power Tools Merchant</p>
                 </div>
 
                 <div className="space-y-4 text-sm text-slate-700">
+                  {/* Address */}
                   <div className="flex items-start space-x-3">
                     <MapPin className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
                     <div>
                       <p className="font-semibold text-slate-900">{t('store_address')}</p>
-                      <p className="text-slate-600 mt-0.5">
-                        {settings.address || t('address_not_verified')}
+                      <p className="text-slate-600 mt-0.5 leading-relaxed">
+                        {settings.address || '215, Dr Nanjappa Rd, Flyover, Anupperpalayam, Ram Nagar, Coimbatore, Tamil Nadu 641018'}
+                      </p>
+                      <p className="text-xs text-brand-600 font-medium mt-1">
+                        Landmark: Dr. Nanjappa Road Flyover / Ram Nagar
                       </p>
                     </div>
                   </div>
 
+                  {/* Opening Hours */}
                   {settings.opening_hours && (
                     <div className="flex items-start space-x-3">
                       <Wrench className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
@@ -352,13 +378,32 @@ export const HomePage: React.FC = () => {
                     </div>
                   )}
 
+                  {/* Phone */}
                   {settings.phone && (
                     <div className="flex items-start space-x-3">
                       <PhoneCall className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
                       <div>
                         <p className="font-semibold text-slate-900">{t('phone_number')}</p>
-                        <a href={`tel:${settings.phone}`} className="text-brand-600 hover:underline mt-0.5 block">
+                        <a href={`tel:${settings.phone}`} className="text-brand-600 hover:underline mt-0.5 block font-medium">
                           {settings.phone}
+                        </a>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* WhatsApp */}
+                  {settings.whatsapp_number && (
+                    <div className="flex items-start space-x-3">
+                      <MessageCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-semibold text-slate-900">{t('whatsapp_chat')}</p>
+                        <a
+                          href={`https://wa.me/${settings.whatsapp_number.replace(/[^\d]/g, '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-emerald-700 hover:underline mt-0.5 block font-medium"
+                        >
+                          {settings.whatsapp_number}
                         </a>
                       </div>
                     </div>
@@ -386,12 +431,12 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Google Map Preview / Embed Card */}
-            <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm min-h-[360px] flex flex-col">
+            {/* Embedded Interactive Google Map */}
+            <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm min-h-[420px] flex flex-col">
               <div className="p-4 bg-slate-100 border-b border-slate-200 flex items-center justify-between text-xs text-slate-600">
                 <div className="flex items-center space-x-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-                  <span className="font-medium">Verified Google Maps Listing</span>
+                  <span className="font-medium">Live Google Maps Navigation</span>
                 </div>
                 <a
                   href={settings.google_maps_url}
@@ -399,29 +444,24 @@ export const HomePage: React.FC = () => {
                   rel="noopener noreferrer"
                   className="font-semibold text-brand-600 hover:text-brand-700 inline-flex items-center"
                 >
-                  <span>Open in App</span>
+                  <span>Open in Google Maps App</span>
                   <ExternalLink className="w-3 h-3 ml-1" />
                 </a>
               </div>
-              <div className="flex-1 relative flex flex-col items-center justify-center p-8 text-center bg-slate-50">
-                <div className="w-16 h-16 rounded-2xl bg-brand-50 border border-brand-200 text-brand-600 flex items-center justify-center mb-4 shadow-sm">
-                  <MapPin className="w-8 h-8" />
-                </div>
-                <h4 className="text-lg font-bold text-slate-900 mb-1">
-                  Find Our Shop on Google Maps
-                </h4>
-                <p className="text-sm text-slate-600 max-w-md mb-6">
-                  Click the button below to navigate directly using Google Maps turn-by-turn navigation on your mobile device or desktop.
-                </p>
-                <a
-                  href={settings.google_maps_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-xl bg-navy-950 text-white font-semibold text-sm hover:bg-navy-900 transition-colors shadow-md"
-                >
-                  <MapPin className="w-4 h-4 mr-2 text-brand-400" />
-                  Open Verified Google Maps Link
-                </a>
+
+              {/* Embedded Google Map iframe */}
+              <div className="flex-1 w-full relative min-h-[360px] bg-slate-100">
+                <iframe
+                  title="Bombay Tools Agency - Store Location"
+                  src={BUSINESS_CONFIG.googleMapsEmbedUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: '380px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                />
               </div>
             </div>
           </div>

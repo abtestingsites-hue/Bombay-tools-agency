@@ -24,3 +24,4 @@ describe('Business Configuration & Helpers', () => {
     expect(BUSINESS_CONFIG.currency.code).toBe('INR');
   });
 });
+

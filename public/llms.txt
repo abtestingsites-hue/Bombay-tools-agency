@@ -24,3 +24,4 @@
 1. Browse products or catalog categories.
 2. Click "Enquire on WhatsApp" or "Request Bulk Quote" to submit required specifications or bill of quantities (BOQ).
 3. The store responds with confirmed availability, genuine specifications, and customized quotation.
+

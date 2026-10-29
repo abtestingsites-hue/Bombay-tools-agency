@@ -140,3 +140,4 @@ export const CategoryDetailPage: React.FC = () => {
     </div>
   );
 };
+

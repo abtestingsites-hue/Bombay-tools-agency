@@ -4,3 +4,4 @@ Disallow: /admin
 Disallow: /admin/*
 
 Sitemap: https://example.com/sitemap.xml
+

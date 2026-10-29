@@ -81,3 +81,4 @@ export const BrandsPage: React.FC = () => {
     </div>
   );
 };
+

@@ -180,3 +180,4 @@ npm run build
 2. **Dedicated WhatsApp Business Account**: Register a dedicated business mobile SIM with WhatsApp Business app to receive customer BOQs and enquiries.
 3. **Google Business Profile**: Claim and verify the Google Maps location (`https://maps.app.goo.gl/zrJSTZ6aXR7ATsrTA?g_st=aw`) under the official shop name.
 4. **GSTIN Registration**: Ensure 15-digit GSTIN is available for commercial invoicing for construction contractors.
+

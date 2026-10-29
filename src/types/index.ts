@@ -90,3 +90,4 @@ export interface FAQ {
 }
 
 export type Language = 'en' | 'ta';
+

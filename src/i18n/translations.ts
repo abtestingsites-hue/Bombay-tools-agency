@@ -8,7 +8,7 @@ export const translations = {
     nav_bulk_orders: 'Bulk Quotations',
     nav_about: 'About Us',
     nav_faq: 'FAQs',
-    nav_contact: 'Contact & Location',
+    nav_contact: 'Contact Us',
     nav_admin: 'Admin Portal',
 
     // Hero & Home
@@ -106,7 +106,7 @@ export const translations = {
     nav_bulk_orders: 'மொத்த கொள்முதல்',
     nav_about: 'எங்களை பற்றி',
     nav_faq: 'அடிக்கடி கேட்கப்படும் கேள்விகள்',
-    nav_contact: 'தொடர்பு & இருப்பிடம்',
+    nav_contact: 'தொடர்பு கொள்ள',
     nav_admin: 'நிர்வாக தளம்',
 
     // Hero & Home
@@ -196,3 +196,4 @@ export const translations = {
     powered_by_note: 'நேர்மையான மற்றும் தரமான ஹார்டுவேர் சப்ளைக்கு உறுதி அளிக்கிறோம்.',
   },
 };
+

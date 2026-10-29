@@ -246,3 +246,4 @@ ON storage.objects FOR ALL
 TO authenticated
 USING (bucket_id = 'products')
 WITH CHECK (bucket_id = 'products');
+
